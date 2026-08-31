@@ -1,0 +1,1 @@
+(()=>{const files=['app1.js','app2.js','app3.js','app4.js'];let i=0;const next=()=>{if(i>=files.length)return;const s=document.createElement('script');s.src='./'+files[i++];s.onload=next;s.onerror=()=>console.error('Не удалось загрузить часть приложения');document.body.appendChild(s)};next()})();
